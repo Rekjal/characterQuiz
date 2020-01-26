@@ -1,19 +1,31 @@
 $(document).ready(function() {  
-  $("#formOne").submit(function(event) {
+   $("#start-quiz").click(function(event) {
+    alert ("click on take the quiz deteced");
+    $(".formOne").removeClass("newClass");
+    event.preventDefault();
+
+  });
+
+
+
+
+
+
+//   $("#formOne").submit(function(event) {
    
 
-  var eyeColor = $("input:radio[name=eye-color]:checked").val();
-  var hairColor = $("input:radio[name=hair-color]:checked").val();
-  var age = parseInt($("#age").val());
+//   var eyeColor = $("input:radio[name=eye-color]:checked").val();
+//   var hairColor = $("input:radio[name=hair-color]:checked").val();
+//   var age = parseInt($("#age").val());
 
- // alert (age);
+//  // alert (age);
 
-  if (eyeColor === 'Blue' && hairColor === 'Blonde' && age < 60){
-    $('#result').text(`Brad Pitt`);
-   // alert("In brad Pitt loop");
-  } else {  
-    $('#result').text(`Anyone but Brad Pitt`);
-}
+//   if (eyeColor === 'Blue' && hairColor === 'Blonde' && age < 60){
+//     $('#result').text(`Brad Pitt`);
+//    // alert("In brad Pitt loop");
+//   } else {  
+//     $('#result').text(`Anyone but Brad Pitt`);
+// }
 
 
 
@@ -27,6 +39,4 @@ $(document).ready(function() {
   //     $('#mid-height').addClass("backgroundColor");
   //     $('#tall').addClass("backgroundColor");
   //   }
-  event.preventDefault();
-});
   });
